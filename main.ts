@@ -12,6 +12,7 @@ namespace ScreenCaptureKind {
 
  namespace screenCapture {
   //% block="capture screen image at %x %y scale of captured screen image || %sx %sy"
+  //% blockSetVariable=captureScreenSprite
   //% x.defl=scene.screenWidth() 
   //% y.defl=scene.screenHeight()
   //% sx.defl=1 
