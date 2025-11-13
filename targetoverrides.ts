@@ -1,1 +1,1 @@
-pause(1) // yet the screen pause for a second so it can capture stuff instead of capturing the plain screen image transparent image
+pause(100) // yet the screen pause for a second so it can capture stuff instead of capturing the plain screen image transparent image
