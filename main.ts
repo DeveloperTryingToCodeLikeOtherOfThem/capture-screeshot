@@ -26,5 +26,8 @@ namespace screenCapture {
 
     //% blockId=capture_screen_pause block="pause %ms"
     //% shim=loops::pause weight=99
-    export function pause(ms = 100) { }
+    //% ms.defl=100
+    export function pause(ms = 100) { 
+        pause(ms)
+    }
 }
