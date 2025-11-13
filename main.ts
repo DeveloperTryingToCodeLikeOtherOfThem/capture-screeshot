@@ -17,6 +17,7 @@ namespace screenCapture {
     //% y.defl=60
     //% sx.defl=1 
     //% sy.defl=1
+    pause(100) // pause before captuing the screen image
     export function captureScreenImageAt(x: number, y: number, sx = 1, sy = 1): Sprite {
         let screenCaptureSprite = sprites.create(image.create(screen.width, screen.height), ScreenCaptureKind.CaptureScreen)
         screenCaptureSprite.image.blit(x, y, sx, sy, screen, screenCaptureSprite.x, screenCaptureSprite.y, sx, sy, true, false)
