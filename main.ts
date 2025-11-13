@@ -19,8 +19,8 @@ namespace screenCapture {
     //% sy.defl=1
     export function captureScreenImageAt(x: number = 80, y: number = 60, sx = 1, sy = 1): Sprite {
         let screenCaptureSprite = sprites.create(image.create(screen.width, screen.height), ScreenCaptureKind.CaptureScreen)
-        for (let y = 0; y < screenCaptureSprite.image.height; y++)
-        for (let x = 0; x < screenCaptureSprite.image.width; x++) {
+        for (let y = 0; y < screen.height; y++)
+        for (let x = 0; x < screen.width; x++) {
             const color = screen.getPixel(x, y)
             screenCaptureSprite.image.setPixel(x, y, color)
         }
