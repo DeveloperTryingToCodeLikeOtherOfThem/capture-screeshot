@@ -23,4 +23,6 @@ namespace screenCapture {
         screenCaptureSprite.image.blit(x, y, sx, sy, screen, screenCaptureSprite.x, screenCaptureSprite.y, sx, sy, true, false)
         return screenCaptureSprite
     }
+
+    pause(100) // pause before captuing the screen image
 }
