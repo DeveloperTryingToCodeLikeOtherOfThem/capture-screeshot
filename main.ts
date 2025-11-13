@@ -18,9 +18,9 @@ namespace screenCapture {
     //% y.defl=60
     //% sx.defl=scene.screenWidth()
     //% sy.defl=scene.screenHeight()
-    export function captureScreenImageAt(x: number, y: number, sx = 2, sy = 2): Sprite {
+    export function captureScreenImageAt(x: number, y: number): Sprite {
         let screenCaptureSprite = sprites.create(image.create(screen.width, screen.height), ScreenCaptureKind.CaptureScreen)
-        screenCaptureSprite.image.blit(x, y, sx, sy, screen, screenCaptureSprite.x, screenCaptureSprite.y, sx * screen.width, sy * screen.height, true, false)
+        screenCaptureSprite.image.blit(x, y, screenCaptureSprite.sx, screenCaptureSprite.sy,  screen, screenCaptureSprite.x, screenCaptureSprite.y, screenCaptureSprite.sx, screenCaptureSprite.sy, true, false)
         return screenCaptureSprite
     }
 
