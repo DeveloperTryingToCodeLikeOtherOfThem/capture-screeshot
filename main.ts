@@ -11,6 +11,7 @@ namespace ScreenCaptureKind {
 }
 
 namespace screenCapture {
+    //% blockId="capture_screen_image_at"
     //% block="capture screen image at %x %y scale of captured screen image || %sx %sy"
     //% blockSetVariable=captureScreenSprite
     //% x.defl=80
@@ -23,5 +24,7 @@ namespace screenCapture {
         return screenCaptureSprite
     }
 
-    pause(100) // pause before captuing the screen image
+    //% blockId=capture_screen_pause block="pause %ms"
+    //% shim=loops::pause
+    export function pause(ms = 100) { }
 }
