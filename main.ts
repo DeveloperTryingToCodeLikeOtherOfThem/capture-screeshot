@@ -16,10 +16,11 @@ namespace ScreenCaptureKind {
   //% y.defl=scene.screenHeight()
   //% sx.defl=1 
   //% sy.defl=1
-  export function captureScreenImageAt(x: number = screen.width, y: number = screen.height, sx = 1, sy = 1) {
+  export function captureScreenImageAt(x: number = scene.screenWidth(), y: number = scene.screenHeight(), sx = 1, sy = 1): Sprite {
     const screenCapturedImage = image.create(screen.width, screen.height)
     screenCapturedImage.blit(x, y, 0, 0, screen, x, y, sx, sy, true, false)
 
     let screenCaptureSprite = sprites.create(screenCapturedImage, ScreenCaptureKind.CaptureScreen)
+    return screenCaptureSprite
   }
  }
