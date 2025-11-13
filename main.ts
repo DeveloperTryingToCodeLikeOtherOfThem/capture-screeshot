@@ -11,15 +11,20 @@ namespace ScreenCaptureKind {
 }
 
  namespace screenCapture {
-  //% block="capture screen image at %x=scene.screenWidth() %y=scene.screenHeight() scale of captured screen image || %sx %sy"
+  //% block="capture screen image at %x %y scale of captured screen image || %sx %sy"
   //% blockSetVariable=captureScreenSprite
-  //% sx.defl=1 
+  //% x.defl=scene.screenWidth() >> 1
+  //% y.defl=scene.screenHeight() >> 1
+ //% sx.defl=1 
   //% sy.defl=1
   export function captureScreenImageAt(x: number = scene.screenWidth(), y: number = scene.screenHeight(), sx = scene.screenWidth(), sy = scene.screenHeight()): Sprite {
-    const screenCapturedImage = image.create(screen.width, screen.height)
-    screenCapturedImage.blit(x, y, 0, 0, screen, screen.width, screen.height, sx, sy, true, false)
-
-    let screenCaptureSprite = sprites.create(screenCapturedImage, ScreenCaptureKind.CaptureScreen)
+    let screenCaptureSprite = sprites.create(screen, ScreenCaptureKind.CaptureScreen)
+    screenCaptureSprite.x = x 
+    screenCaptureSprite.y = y
+    screenCaptureSprite.sx = sx 
+    screenCaptureSprite.sy = sy
     return screenCaptureSprite
   }
+
+  
  }
