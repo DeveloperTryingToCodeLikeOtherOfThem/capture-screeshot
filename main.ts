@@ -11,7 +11,7 @@ namespace ScreenCaptureKind {
 }
 
 namespace screenCapture {
-    //% blockId="capture_screen_image_at"
+    //% blockId="capture_screen_image_at" weight=100
     //% block="capture screen image at %x %y scale of captured screen image || %sx %sy"
     //% blockSetVariable=captureScreenSprite
     //% x.defl=80
@@ -25,6 +25,6 @@ namespace screenCapture {
     }
 
     //% blockId=capture_screen_pause block="pause %ms"
-    //% shim=loops::pause
+    //% shim=loops::pause weight=99
     export function pause(ms = 100) { }
 }
